@@ -1,0 +1,12 @@
+{
+	"alias" : "php",
+	"image" : "dockerregistry-dsi.intra.weka.fr/weka-php-5.3-apache:latest",
+	"sources" : "/var/www",
+	"ports" : [
+        {
+            "host" : "80",
+            "container" : "80"
+        }
+    ]
+
+}

@@ -1,0 +1,40 @@
+{
+	"alias" : "php",
+	"image" : "dockerregistry-dsi.intra.weka.fr/weka-php-5.6-apache:latest",
+	"sources" : "/var/www/html",
+	"ports" : [
+        {
+            "host" : "80",
+            "container" : "80"
+        }
+    ],
+  "volumes" : [
+    {
+      "host" : "~/jsdock/conf/000-sf4-default.conf",
+      "container" : "/etc/apache2/sites-available/000-default.conf",
+      "conditions" : {
+        "dirExists" : [
+          "web"
+        ]
+      }
+    },
+    {
+      "host" : "~/jsdock/conf/000-ezpublish4-default.conf",
+      "container" : "/etc/apache2/sites-available/000-default.conf",
+      "conditions" : {
+        "dirExists" : [
+          "settings"
+        ]
+      }
+    },
+    {
+      "host" : "~/jsdock/conf/000-sf5-default.conf",
+      "container" : "/etc/apache2/sites-available/000-default.conf",
+      "conditions" : {
+        "dirExists" : [
+          "public"
+        ]
+      }
+    }
+  ]
+}

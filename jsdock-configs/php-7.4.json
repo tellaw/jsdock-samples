@@ -1,0 +1,36 @@
+{
+	"alias" : "php",
+	"image" : "tellaw77/lamp7.4:1",
+	"sources" : "/var/www/html",
+	"ports" : [
+        {
+            "host" : "80",
+            "container" : "80"
+        }
+    ],
+	"env" : {
+		"mykey":"myvalue",
+		"mykey2":"myvalue2"
+	},
+	"volumes" : [
+        {
+			"host" : "/home/tellaw/jsdock/conf/000-sf4-default.conf",
+            "container" : "/etc/apache2/sites-available/000-default.conf",
+			"conditions" : {
+                "dirExists" : [
+                    "web"
+                ]
+			}
+		},
+        {
+			"host" : "/home/tellaw/jsdock/conf/000-sf5-default.conf",
+            "container" : "/etc/apache2/sites-available/000-default.conf",
+			"conditions" : {
+                "dirExists" : [
+                    "public"
+                ]
+			}
+		}
+    ]
+	
+}
