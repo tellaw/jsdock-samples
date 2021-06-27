@@ -14,7 +14,7 @@
 	},
 	"volumes" : [
         {
-			"host" : "/home/tellaw/jsdock/conf/000-sf4-default.conf",
+			"host" : "/Users/ericwallet/jsdock/conf/000-sf4-default.conf",
             "container" : "/etc/apache2/sites-available/000-default.conf",
 			"conditions" : {
                 "dirExists" : [
@@ -23,7 +23,7 @@
 			}
 		},
         {
-			"host" : "/home/tellaw/jsdock/conf/000-sf5-default.conf",
+			"host" : "/Users/ericwallet/jsdock/conf/000-sf5-default.conf",
             "container" : "/etc/apache2/sites-available/000-default.conf",
 			"conditions" : {
                 "dirExists" : [

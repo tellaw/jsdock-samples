@@ -1,6 +1,6 @@
 {
 		"alias" : "devMySQL",
-			"image" : "mysql:8",
+			"image" : "mariadb:latest",
 				"ports" : [
 					        {
 							            "host" : "3306",
@@ -11,10 +11,6 @@
 															"MYSQL_ROOT_PASSWORD":"root"
 																},
 																	"volumes" : [
-																		        {
-																				            "host" : "/home/tellaw/docker/data",
-																					                "container" : "/var/lib/mysql"
-																							        }
 																								    ]
 																								    	
 }
