@@ -1,16 +1,14 @@
 {
-		"alias" : "devMySQL",
-			"image" : "mariadb:latest",
-				"ports" : [
-					        {
-							            "host" : "3306",
-								                "container" : "3306"
-										        }
-											    ],
-											    	"env" : {
-															"MYSQL_ROOT_PASSWORD":"root"
-																},
-																	"volumes" : [
-																								    ]
-																								    	
+	"alias" : "devMySQL",
+	"image" : "mariadb:latest",
+	"ports" : [
+		{
+			"host" : "3306",
+			"container" : "3306"
+		}
+	],
+	"env" : {
+		"MYSQL_ROOT_PASSWORD":"root"
+	},
+	"volumes" : []																				    	
 }

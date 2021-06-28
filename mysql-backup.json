@@ -1,0 +1,14 @@
+{
+	"alias" : "mysqlBackupProcess",
+	"image" : "databack/mysql-backup:latest",
+	"sources" : "/db",
+	"ports" : [],
+	"env" : {
+		"DB_SERVER": "devMySQL",
+		"DB_USER": "root",
+		"DB_PASS": "root",
+		"RUN_ONCE": "true",
+		"DB_DUMP_TARGET": "/db"
+	},
+	"volumes" : []																				    	
+}
